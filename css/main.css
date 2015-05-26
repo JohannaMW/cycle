@@ -9,7 +9,7 @@
    License: none (public domain)
 */
 
-body, html, .container { height:100%;}
+body, html { height:100% }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -28,6 +28,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
+	font-family: 'Roboto Condensed', sans-serif!important;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -66,41 +67,114 @@ table {
 
 .subnav {
 	list-style: none;
-	margin: 0;
-	padding: 0;
+	margin-bottom: 20px;
 	text-align: center;
+	display:block;
 }
 
 .subnav li {
 	display: inline;
+	margin-right: 30px;
+	font-size: 12px;
 }
 
 .subnav a {
 	display: inline-block;
 	padding: 10px;
+	text-decoration: none;
+	color: grey;
 }
+
+.subnav a:hover {
+	color: black;
+}
+
+.mainnav {
+	margin: 20px;
+	border-bottom: 2px solid #D3D8E0;
+}
+
+.mainnav p {
+	font-size: 14px;
+}
+
+.footernav ul {
+	margin-top: 15px !important;
+}
+
+
 
 .footernav li {
 	display: inline;
+	margin-left: 30px;
 }
 
 .footernav a {
+	margin-top: 7.5px;
 	display: inline-block;
 	padding: 10px;
+
 }
 
-.header {
-	height: 25%;
-}
 
 .content {
-	height: 62%;
-	background: #CCCCCC;
+	margin-top: 20px;
+	clear: both;
+	background: #D3D8E0;
 	background-size: 100% !important;
-}
-
-.footer {
-	height: 13%;
+	min-height: 60%;
 }
 
 
+.tele {
+	margin-top: 7.5px;
+}
+
+
+.image_menu img {
+	margin-bottom: 10px;
+	max-width:80%;
+	height:auto;
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+    opacity: 0.5;
+}
+
+.image_menu img:hover {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0%);
+    opacity: 1;
+}
+
+.image_menu img:active {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0%);
+    opacity: 1;
+}
+
+#logo {
+	width: 150px;
+	height: auto;
+}
+
+.logo_text {
+	margin-top: 30px;
+	font-size: 20px;
+	color: #22766;
+}
+
+.contact img {
+	width: 30px;
+	height: 30px;
+}
+
+.text {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.rainbow img {
+	width: 100%;
+	height: 4px;
+}
